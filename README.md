@@ -59,15 +59,15 @@ Also, I didn't check it in depth, but the last time I used them, the `await` was
 
 ## Key Files
 
-- `app/page.tsx`: Server entrypoint that prefetches and dehydrates.
-- `app/_services/prefetch-pokemon-types.ts`: Prefetch the Pokemon Types and cache it in the server.
-- `app/_providers/get-query-client.ts`: QueryClient config, stale time, and dehydration behavior. Default config from https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr.
-- `app/_providers/providers.tsx`: Client QueryClientProvider wrapper. Default config from https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr.
-- `app/_storage/storage.ts`: Storage driver selection (Redis vs local in-memory).
-- `app/_storage/redis-storage.ts`: Redis implementation.
-- `app/_storage/in-memory-storage.ts`: In-memory fallback with manual expiration.
-- `app/_constants/cache.ts`: Shared stale time constant.
-- `app/_constants/query-keys.ts`: Centralized query keys.
+- [app/page.tsx](./app/page.tsx): Server entrypoint that prefetches and dehydrates.
+- [app/_services/prefetch-pokemon-types.ts](./app/_services/prefetch-pokemon-types.ts): Prefetch the Pokemon Types and cache it in the server.
+- [app/_providers/get-query-client.ts](./app/_providers/get-query-client.ts): QueryClient config, stale time, and dehydration behavior. Default config from https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr.
+- [app/_providers/providers.tsx](./app/_providers/providers.tsx): Client QueryClientProvider wrapper. Default config from https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr.
+- [app/_storage/storage.ts](./app/_storage/storage.ts): Storage driver selection (Redis vs local in-memory).
+- [app/_storage/redis-storage.ts](./app/_storage/redis-storage.ts): Redis implementation.
+- [app/_storage/in-memory-storage.ts](./app/_storage/in-memory-storage.ts): In-memory fallback with manual expiration.
+- [app/_constants/cache.ts](./app/_constants/cache.ts): Shared stale time constant.
+- [app/_constants/query-keys.ts](./app/_constants/query-keys.ts): Centralized query keys.
 
 ## Checking and Running the Project
 
