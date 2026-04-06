@@ -8,7 +8,7 @@ interface CacheEntry {
 
 const cache = new Map<string, CacheEntry>();
 
-class LocalStorage implements StorageDriver {
+class InMemoryStorage implements StorageDriver {
   async getItem(key: string): Promise<string | null> {
     const entry = cache.get(key);
     if (!entry) return null;
@@ -30,4 +30,4 @@ class LocalStorage implements StorageDriver {
   }
 }
 
-export default LocalStorage;
+export default InMemoryStorage;
